@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!--  Astrology Service  ජොතිෂය සේවය-->
+<head>
+<title>Home</title>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/2A5FE845-4F05-AE49-AC1C-90FFA297B43B/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/B34B792AFF09-C1CA-94EA-50F4-548EF5A2/abn/main.css"/><script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script><link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--CSS-->
+<link rel="stylesheet" href="css/bootstrap.css" >
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="fonts/font-awesome.css">
+<link rel="stylesheet" href="css/clock.css">
+<link rel="stylesheet" href="css/digitalClock.css">
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.equalheights.js"></script> 
+<script src="js/sForm.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="js/wow/wow.js"></script>
+<script src="js/wow/device.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/clock.js"></script>
+<script>
+    moment().format();
+</script>
+<script>
+    $(document).ready(function () {       
+      if ($('html').hasClass('desktop')) {
+        new WOW().init();
+      }   
+        var interval = setInterval(function() {
+        var momentNow = moment();
+        $('#date-part').html(momentNow.format('YYYY MMMM DD') + ' '
+                            + momentNow.format('dddd')
+                             .substring(0,3).toUpperCase());
+        $('#time-part').html(momentNow.format('A hh:mm:ss'));
+    }, 100);
+    
+    $('#stop-interval').on('click', function() {
+        clearInterval(interval);
+    });
+    });
+    
+</script>
+    
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="https://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="https://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="https://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="https://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="https://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="https://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="https://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+</head>
+<body>
+    
+<div class="main">
+    <!--header-->
+    <div class="container">
+        <header class="clearfix">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+                <ul class="nav sf-menu clearfix">
+                    <li class="active"><a href="index.html">home | මුල් පිටුව </a></li>
+                    <li class="sub-menu"><a href="about.html">about | අපි ගැන</a><span class="fa fa"></span>
+                        <ul class="submenu">
+            				<li><a href="#">columns 01</a></li>
+                            <li><a href="#">columns 02</a></li>
+            				<li><a href="#">columns 03</a><span class="fa fa-angle-down"></span>
+                                <ul class="submenu">
+                                    <li><a href="#">columns 04</a></li>
+                                    <li><a href="#">columns 05</a></li>
+                                  </ul> 
+                            </li>
+            			</ul>
+                    </li>
+                    <li><a href="articles.html">articles | ලිපි</a></li>
+                    <li><a href="books.html">books | පොත්</a></li>
+                    <li><a href="contact.html">contacts | අමතන්න</a></li>
+                </ul>
+            </nav>
+            <ul class="follow_icon">
+                <li><a href="#"><img src="img/follow_icon1.png" alt=""></a></li>
+                <li><a href="#"><img src="img/follow_icon2.png" alt=""></a></li>
+                <li><a href="#"><img src="img/follow_icon3.png" alt=""></a></li>
+<!--
+                <li><a><div class="col-md-1">
+                    <div class='time-frame'>
+                        <div id='date-part'></div>
+                        <div id='time-part'></div>
+                    </div>
+                </div></a> </li>
+-->
+                
+            </ul>
+        </header>
+        
+        <div class="logo_box">
+            <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img src="img/mainLogo.png" alt="logo"></a> <div class="col-md-3">
+                <div class="hero-circle">
+                     <div class="hero-face">
+                        <div id="hour" class="hero-hour"></div>
+                        <div id="minute" class="hero-minute"></div>
+                        <div id="second" class="hero-second"></div>
+                     </div>
+		         </div>
+                
+            </div>
+            </h1>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+                    <form id="search" class="search" action="search.php" method="GET" accept-charset="utf-8">
+                        <input type="text" name="s" value="" onfocus="if (this.value == '') {this.value=''}" onblur="if (this.value == '') {this.value=''}">
+                        <a href="#" onClick="document.getElementById('search').submit()">search</a>
+                    </form>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="zodiac_box">    
+    <div class="container">
+        <div class="box box1 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/aries.png" alt=""></figure>
+            <strong>aries | මේෂ</strong>
+        </div>
+        <div class="box box2 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/taurus.png" alt=""></figure>
+            <strong>taurus | වෘෂභ</strong>
+        </div>
+        <div class="box box3 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/gemini-male-twins-zodiac-sign-symbol.png" alt=""></figure>
+            <strong>gemini | මිථුන</strong>
+        </div>
+        <div class="box box4 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/cancer.png" alt=""></figure>
+            <strong>cancer | කටක</strong>
+        </div>
+        
+        <div class="box box5 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/leo-lion-head-side.png" alt=""></figure>
+            <strong>leo | සිංහ</strong>
+        </div>
+        <div class="box box6 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/virgo.png" alt=""></figure>
+            <strong>virgo | කන්යා</strong>
+        </div>
+        <div class="box box7 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/libra-sign-1.png" alt=""></figure>
+            <strong>libra | තුලා</strong>
+        </div>
+        <div class="box box8 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/scorpio.png" alt=""></figure>
+            <strong>scorpio | වෘෂ්චික</strong>
+        </div>
+        
+        <div class="box box9 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/sagittarius-sign.png" alt=""></figure>
+            <strong>sagittarius | ධනු</strong>
+        </div>
+        <div class="box box10 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/capricorn-3.png" alt=""></figure>
+            <strong>capricorn | මකර</strong>
+        </div>
+        <div class="box box11 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/aquarius-astrological-sign-symbol-1.png" alt=""></figure>
+            <strong>aquarius | කුම්භ</strong>
+        </div>
+        <div class="box box12 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><img src="img/zodiac/pisces.png" alt=""></figure>
+            <strong>pisces | මීන</strong>
+        </div>
+<!--
+        <br/>
+        <br/>
+-->
+    </div>
+</div>
+<!--content-->
+<div class="content"> 
+    <div class="thumb-box1">
+        <div class="container">          
+            <h2>Let the stars help you to discover your fate | ඔබේ ඉරණම සොයා ගැනීමට තාරකා ඔබට උපකාර කරයි</h2>
+            <ul class="list1">
+                <li><a href="#">Horoscopes | හඳහන</a></li>
+                <li><a href="#">psychics | අධ්යාත්මිකය</a></li>
+<!--                <li><a href="#">tarot</a></li>-->
+                <li><a href="#">oracles | පුරෝකථනය</a></li>
+                <li><a href="#">numerology | සංඛ්යා ශාස්ත්රය</a></li>
+<!--                <li><a href="#">forecasts</a></li>-->
+<!--                <li><a href="#">faraway fortunes</a></li>-->
+            </ul>
+            <strong>Today`s horoscope | අද හඳහන :</strong>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-lg-offset-1">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+            </div>
+            <a href="#" class="btn-default btn1">all about your sign</a>
+            <a href="#" class="btn-default btn2">chinese portrait</a>
+        </div>
+    </div>
+    <div class="thumb-box2">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Your biorhythms</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic1.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">read more</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Love & romance</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic2.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">read more</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Dreams</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic3.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">read more</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-box3">
+        <div class="container"> 
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <strong>sign up for free</strong>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>get your daily horoscope, daily lovescope and daily tarot by email</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <form id="newsletter" accept-charset="utf-8">
+                			<div class="success">Your subscribe request has been sent!</div>
+                            <label class="email">
+                		    	<input type="email" value="Enter your email here">
+                		    	<span class="error">*This is not a valid email address.</span>
+                		    </label>
+                            <a href="#" data-type="submit">subscribe</a>
+                		</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-box4">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Horoscopes</strong>
+                    <ul class="list2">
+                        <li><a href="#">2015 Horoscope</a></li>
+                        <li><a href="#">2014 Chinese Horoscope</a></li>
+                        <li><a href="#">Daily Horoscope</a></li>
+                        <li><a href="#">Weekly Horoscope</a></li>
+                        <li><a href="#">Monthly Horoscope</a></li>
+                        <li><a href="#">Daily Love Horoscope</a></li>
+                        <li><a href="#">Career Horoscope</a></li>
+                        <li><a href="#">Weekly Money Horoscope</a></li>
+                        <li><a href="#">Wellness Horoscope</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Tarot readings</strong>
+                    <ul class="list2">
+                        <li><a href="#">Daily Tarot Reading</a></li>
+                        <li><a href="#">Weekly Tarot Reading</a></li>
+                        <li><a href="#">Monthly Tarot Reading</a></li>
+                        <li><a href="#">Today/Tomorrow Tarot</a></li>
+                        <li><a href="#">Daily Love Tarot</a></li>
+                        <li><a href="#">Lover's Triangle Reading</a></li>
+                        <li><a href="#">Dream Tarot Interpretation</a></li>
+                        <li><a href="#">Inner Animal Tarot</a></li>
+                        <li><a href="#">Friend Or Foe Tarot</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Fun & alternative</strong>
+                    <ul class="list2">
+                        <li><a href="#">Celebrity Birthday</a></li>
+                        <li><a href="#">Celebrity Love Match</a></li>
+                        <li><a href="#">Dream Dictionary</a></li>
+                        <li><a href="#">Pet Compatibility</a></li>
+                        <li><a href="#">Magic Love Ball</a></li>
+                        <li><a href="#">Psychic Test</a></li>
+                        <li><a href="#">Shell Oracle</a></li>
+                        <li><a href="#">Daily Love Oracle</a></li>
+                        <li><a href="#">Rate Your Date</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>more about astrology</strong>
+                    <ul class="list2">
+                        <li><a href="#">Premium Charts and Reports</a></li>
+                        <li><a href="#">12 Zodiac Sign Profiles</a></li>
+                        <li><a href="#">12 Chinese Signs</a></li>
+                        <li><a href="#">Chinese Calendar</a></li>
+                        <li><a href="#">Mayan Astrology</a></li>
+                        <li><a href="#">AstroProfile by e-mail</a></li>
+                        <li><a href="#">Horoscope & Astrology Articles</a></li>
+                        <li><a href="#">Psychic Articles</a></li>
+                        <li><a href="#">Astrology Facts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer> 
+    <div class="container">
+        <figure><img src="img/mainLogofooter.png" alt=""></figure><br/>
+        <p>&copy; <em id="copyright-year"></em> <span>|</span> <a href="index-5.html">Privacy Policy</a></p>
+    </div>
+  <!-- {%FOOTER_LINK} -->
+</footer>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/tm-scripts.js"></script>-->
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7078796-5']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+</body><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager -->
+</html>
